@@ -1,0 +1,46 @@
+###
+POST http://localhost:3000/api/v1/teams/team HTTP/1.1
+Content-Type: application/json
+
+{
+  "owner": "Joan Laporta",
+  "city": "Chelsea",
+  "informationClub": {
+    "stadium": "Maor",
+    "template": ["Ter Stegen", "Arauji"]
+  },
+  "informationAdditional": {
+    "trophies":{
+      "quantity": 96,
+      "mostImportant": "UEFA Champions League"
+    },
+    "country": {
+      "name": "Germany"
+    }
+
+  }
+}
+
+###
+GET http://localhost:3000/api/v1/teams HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/teams/62333a97ec47c41bb31a488c HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/teams/Germany HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/teams/623341bbef57a0132615db9b HTTP/1.1
+Content-Type: application/json
+
+{
+    "informationAdditional": {
+        "trophies": {
+          "quantity": 80
+        }
+    }
+}
+
+###
+DELETE http://localhost:3000/api/v1/teams/623341bbef57a0132615db9b HTTP/1.1
